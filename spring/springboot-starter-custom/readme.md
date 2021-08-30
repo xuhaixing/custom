@@ -1,0 +1,1 @@
+OpenFeign starter手动实现
