@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>hx.xu</groupId>
+    <artifactId>openfeign-spring-boot</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>openfeign-spring-boot-autoconfigure</module>
+        <module>openfeign-spring-boot-starter</module>
+        <module>openfeign-spring</module>
+        <module>openfeign-spring-boot-starter-test</module>
+    </modules>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <spring-boot.version>2.4.10</spring-boot.version>
+        <openfen.version>11.6</openfen.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>hx.xu</groupId>
+                <artifactId>openfeign-spring-boot-autoconfigure</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>hx.xu</groupId>
+                <artifactId>openfeign-spring</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.github.openfeign</groupId>
+                <artifactId>feign-core</artifactId>
+                <version>${openfen.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.openfeign</groupId>
+                <artifactId>feign-jackson</artifactId>
+                <version>${openfen.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.openfeign</groupId>
+                <artifactId>feign-okhttp</artifactId>
+                <version>${openfen.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.openfeign</groupId>
+                <artifactId>feign-slf4j</artifactId>
+                <version>${openfen.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.openfeign</groupId>
+                <artifactId>feign-hystrix</artifactId>
+                <version>${openfen.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.openfeign</groupId>
+                <artifactId>feign-ribbon</artifactId>
+                <version>${openfen.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.openfeign</groupId>
+                <artifactId>feign-httpclient</artifactId>
+                <version>${openfen.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.openfeign</groupId>
+                <artifactId>feign-gson</artifactId>
+                <version>${openfen.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+   <repositories>
+       <repository>
+           <id>maven-repo</id>
+           <name></name>
+           <url>https://repo1.maven.org/maven2/</url>
+           <snapshots>
+               <enabled>true</enabled>
+           </snapshots>
+       </repository>
+       <repository>
+           <id>sonatype-oss-snapshots</id>
+           <name>Sonatype OSS Snapshots Repository</name>
+           <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+       </repository>
+       <repository>
+           <id>spring-milestone</id>
+           <name>Spring Milestone</name>
+           <url>https://repo.spring.io/milestone</url>
+           <snapshots>
+               <enabled>false</enabled>
+           </snapshots>
+       </repository>
+       <repository>
+           <id>spring-snapshot</id>
+           <name>Spring Snapshot</name>
+           <url>https://repo.spring.io/snapshot</url>
+           <snapshots>
+               <enabled>true</enabled>
+           </snapshots>
+       </repository>
+   </repositories>
+
+</project>
