@@ -1,0 +1,36 @@
+*.class
+*.jar
+*.war
+*.ear
+target
+
+# eclipse
+.classpath
+.project
+.settings/
+
+# idea
+.idea/
+*.iml
+*.ipr
+*.iws
+out
+
+# log file
+*.log
+*.log.*
+.gitignore
+
+# vscode
+node_modules
+package-lock.json
+.vscode
+
+# Android
+.gradle
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+
+mypending
